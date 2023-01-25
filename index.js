@@ -65,7 +65,7 @@ function runQuery () {
   return inquirer.prompt(questions)
     .then((answers) => {
       const markdown = generateMarkdown(answers)
-      fs.writeFile('README.md', markdown, function(err) {
+      fs.writeFile('READMEexample.md', markdown, function(err) {
         if(err){
           console.log('Could not save file')
         } else {
