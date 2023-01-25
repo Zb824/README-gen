@@ -57,7 +57,13 @@ const questions = [
     name: 'contributors',
     message: "Who contributed to your project?",
   },
-  
+  {
+    type: 'input',
+    name: 'test',
+    message: 'Please enter any test instructions.'
+  }
+ 
+
 ]
 
 

@@ -44,9 +44,10 @@ ${renderLicenseBadge(answers.license)}
 - [Description](#description)
 - [Usage](#usage)
 - [Contributions](#contributions)
-- [Contact info](#contact-info)
+- [Questions](#questions)
 - [License](#license)
 - [Installation](#installation)
+- [Tests](#test)
 
 ## Description
     ${answers.description}
@@ -60,14 +61,15 @@ ${renderLicenseBadge(answers.license)}
 ## Contributions
     ${answers.contributors}
 
-## Contact info
+## Questions
     ${answers.email}
     ${answers.github}
 
 ## License
-    ${renderLicenseSection(answers.license)}
+    ${answers.license}
     
-  
+## Tests
+  ${answers.test}  
     
 `;
 }

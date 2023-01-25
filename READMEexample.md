@@ -1,37 +1,39 @@
 
-# test
+# Test Title
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 
 
-    https://github.com/test/test
+    https://github.com/zb824/Test Title
 
 ## Table of contents
 - [Description](#description)
 - [Usage](#usage)
 - [Contributions](#contributions)
-- [Contact info](#contact-info)
+- [Questions](#questions)
 - [License](#license)
 - [Installation](#installation)
+- [Tests](#test)
 
 ## Description
-    test
+    it helps you generate a README file
 
 ## Usage
-    Guidelines for installation: test
+    Guidelines for installation: it is used by the user filling out prompts
 
 ## Installation
-    test
+    inquirer 8.2.4
 
 ## Contributions
-    test
+    Zach borders
 
-## Contact info
-    test
-    test
+## Questions
+    @email.com
+    zb824
 
 ## License
-    Licensed under the ${this.renderLicenseLink(license)} license
+    mit
     
-  
+## Tests
+  null  
     
