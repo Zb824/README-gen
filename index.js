@@ -1,7 +1,7 @@
 const inquirer = require('inquirer')
 const fs = require ('fs')
 
-const generateMarkdown = require('./util/generateMarkdown.js');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
 
@@ -21,11 +21,7 @@ const questions = [
     message:'What does the user need to install to run this app?',
     name: 'installation'
   },
-  {
-    type:'input',
-    message: 'Table of Contents',
-    name: 'table of contents'
-  },
+  
   {
     type: 'input',
     message: 'How is the app used? Provide instructions',
@@ -35,7 +31,10 @@ const questions = [
     type:'list',
     message:'What license did you use?',
     name:'license',
-    choices: ["none", "MIT", "Apache License 2.0"]
+    choices: ["none", "MIT", "Apache License 2.0", "ISC"],
+    filter:(val) => {
+      return val.toLowerCase();
+    }
 
   },
   {
@@ -57,47 +56,34 @@ const questions = [
     type: 'input',
     name: 'contributors',
     message: "Who contributed to your project?",
-  }
+  },
+  
 ]
 
 
-
-
-
-
-function makeDirectory() { 
-  if (!fs.existsSync("./output")) {
-    fs.mkdir("./output", function (err) {
-      if (err) {
-        console.log(err);
-      } else {
-        console.log("Success!");
-      }
-    });
-  } else {
-    console.log("Directory file already exists.");
-  }
+function runQuery () {
+  return inquirer.prompt(questions)
+    .then((answers) => {
+      const markdown = generateMarkdown(answers)
+      fs.writeFile('README.md', markdown, function(err) {
+        if(err){
+          console.log('Could not save file')
+        } else {
+            console.log ('Success: new README.md file generated')
+        }
+        
+      })
+      return answers
+    })
+    .catch((err)=>{
+      console.log(err)
+    
+  })
   
 }
 
 
-function writeToFile(fileName, data) {
-  fs.writeFile(fileName, data, err => {
-    err ? console.error(err) : console.log('Success, Your README file has been created. ')
-  });
+
+runQuery(); {
+
 }
-
-
-
-function init() {
-  inquirer.prompt(questions).then(answers => {
-    makeDirectory();
-    writeToFile("./output/README.md", md.generateMarkdown(answers));
-  });
-}
-
-
-init();
-
-
-

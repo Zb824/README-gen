@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "fs": "^0.0.1-security",
-    "inquirer": "^8.2.4"
+    "inquirer": "^8.2.4",
+    "util": "^0.12.5"
   },
   "name": "readme-gen",
   "version": "1.0.0",
