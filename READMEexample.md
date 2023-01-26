@@ -16,16 +16,16 @@
 - [Tests](#test)
 
 ## Description
-    it helps you generate a README file
+    helps the user generate a README file
 
 ## Usage
-    Guidelines for installation: it is used by the user filling out prompts
+    Guidelines for installation: it is used by the user filling in prompts about their readme
 
 ## Installation
     inquirer 8.2.4
 
 ## Contributions
-    Zach borders
+    Zach Borders
 
 ## Questions
     @email.com
