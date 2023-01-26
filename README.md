@@ -2,7 +2,7 @@
 
 ![](./assets/readme-sc.png)
 
-img src = "https://share.getcloudapp.com/P8uNOvER"
+   ![Demonstration]   https://share.getcloudapp.com/P8uNOvER
 
 ## User Story
 
